@@ -11,6 +11,7 @@ function Book(title,author,pages,read)
  this.author = author;
  this.pages = pages
  this.read = read;
+ myLibrary.push(this);
 }
 
 function addBookToLibrary() {
@@ -43,5 +44,10 @@ bookBlock.appendChild(bookPages);
 bookBlock.appendChild(bookRead);
 }
 
-for (let i = 0; i < myLibrary.length; i++) {
-    newBlock(myLibrary[i]);   }
+function addBooks(){
+    for (let i = 0; i < myLibrary.length; i++) {
+     newBlock(myLibrary[i]);   }
+}
+
+book5 = Book("jr", "ff", "56", "not read",)
+addBooks();

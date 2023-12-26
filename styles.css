@@ -1,7 +1,15 @@
 *
 {
     box-sizing: border-box;
-    border: 1px solid;
+    overflow: hidden;
+}
+
+.head
+{
+    width: 100vw;
+    height: 90px;
+    background-color: white;
+    border-bottom: 1px solid black;
 }
 
 .booksList
@@ -9,15 +17,37 @@
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    margin-top: 150px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bookblock
 {
-    margin-right: 75px;
-    margin-bottom: 75px;
-    width: 250px;
-    height: 250px;
+    text-align: center;
+    border: 2px solid lightgray;
+    border-radius: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    height: 200px;
+}
+
+.booktitle
+{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.bookauthor
+{
+    margin-top: 4px;
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.bookpages
+{
+  margin-top: 20px;
 }
