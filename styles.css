@@ -1,0 +1,23 @@
+*
+{
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+.booksList
+{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bookblock
+{
+    margin-right: 75px;
+    margin-bottom: 75px;
+    width: 250px;
+    height: 250px;
+}
