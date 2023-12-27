@@ -1,12 +1,18 @@
 const dialog = document.querySelector('dialog');
 const addBtn = document.getElementById('addBtn');
 const booksList = document.getElementById("booksList");
+const confirmBtn = document.getElementById("confirmButton");
+
+const newTitleField = document.getElementById("newTitle");
+const newAuthorField = document.getElementById("newAuthor");
+const newPagesField = document.getElementById("newPages");
+const newReadField = document.getElementById("newRead");
 
 addBtn.addEventListener('click', () => dialog.showModal());
 
 const myLibrary = [
-    {title: "jj", author: "jj", pages: "55", read: "read"},
-    {title: "j4", author: "j5", pages: "55", read: "read"}
+    {title: "jj", author: "jj", pages: "55", read: true},
+    {title: "j4", author: "j5", pages: "55", read: true}
 ];
 
 function Book(title,author,pages,read)
@@ -29,7 +35,7 @@ const bookRead = document.createElement("button");
 bookTitle.textContent = book.title;
 bookAuthor.textContent = book.author;
 bookPages.textContent = book.pages;
-bookRead.textContent = book.read;
+book.read == true ? bookRead.textContent ="Read" : bookRead.textContent = "Not read";
 
 bookBlock.classList.add("bookblock");
 bookTitle.classList.add("booktitle");
@@ -48,6 +54,23 @@ function addBook (form) {
     var newTitle = form.newTitle.value;
     var newAuthor = form.newAuthor.value;
     var newPages = form.newPages.value;
-    Book(`${newTitle}`,`${newAuthor}`,`${newPages}`, `not read`);
-    newBlock(myLibrary[myLibrary.length - 1])
+    var newRead = form.newRead.checked;
+
+if (newTitle === '' || newAuthor === '' || newPages === ''){
+    alert("Please fill in all the fields");
+    return;}
+
+    Book(`${newTitle}`,`${newAuthor}`,`${newPages}`, newRead);
+    newBlock(myLibrary[myLibrary.length - 1]);
+    emptyFields();
+    dialog.close();}
+
+function emptyFields()
+{
+    newTitleField.value = "";
+    newAuthorField.value = "";
+    newPagesField.value = "";
+    newReadField.checked = false;
 }
+
+

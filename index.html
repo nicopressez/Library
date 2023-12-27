@@ -14,11 +14,12 @@
         <dialog class="newBook" id="newBook">
           <p>Add new book</p>
           <form method="dialog" class="booksForm" name="newBookForm">
-            <label><input type="text" placeholder="Title" name="newTitle"> </label>
-            <label><input type="text" placeholder="Author" name="newAuthor"></label>
-            <label><input type="number" placeholder="Pages" name="newPages"></label>
-            <label>Have you read it?<input type="checkbox" name="newRead"></label>
-            <input id="confirmButton" type="button" name="button" value="Click" onClick="addBook(this.form)">
+            <label><input id ="newTitle" type="text" placeholder="Title" name="newTitle"> </label>
+            <label><input id="newAuthor" type="text" placeholder="Author" name="newAuthor" ></label>
+            <label><input id="newPages" type="number" placeholder="Pages" name="newPages" ></label>
+            <label>Have you read it?<input id="newRead" type="checkbox" name="newRead" ></label>
+            <input id="confirmButton" type="button" name="button" value="Submit" onClick="addBook(this.form)">
+            <button>Cancel</button>
           </form>
         </dialog>
 
