@@ -1,15 +1,105 @@
+:root
+{
+    --main-color1: #e5ebea;
+    --main-color2: #e23c32;
+    --main-color3: #25272a;
+}
+
+body
+{
+    background-color: var(--main-color1);
+}
+
 *
 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .head
 {
     width: 100vw;
     height: 90px;
-    background-color: white;
-    border-bottom: 1px solid black;
+    background-color: var(--main-color1);
+    border-bottom: 5px solid var(--main-color2);
+}
+
+.head > h1
+{
+    padding-top: 10px;
+    color: var(--main-color2);
+    font-size: 3rem;
+    margin-left: 150px;
+}
+
+.addBtn
+{
+  color: var(--main-color3);
+  font-size: 1.8rem;
+  position: relative;
+  background-color: var(--main-color1);
+  top: 25px;
+  left: 43%;
+  right: 45%;
+  width: 300px;
+  height: 100px;
+  border: 2px solid var(--main-color3);
+  border-radius: 3%;
+}
+
+button:hover
+{
+    filter: brightness(96%);
+}
+
+button:active
+{
+    filter: brightness(85%);
+}
+
+dialog
+{
+    text-align: center;
+    margin:180px auto;
+    width: 450px;
+    height: 450px;
+    border-radius: 3%;
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+
+dialog input[type="text"], [type="number"]
+{
+    width: 80%;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+dialog p
+{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+dialog input[type="checkbox"]
+{
+    margin-left: 10px;
+    margin-top: 20px;
+    width:20px;
+    height:20px;
+    border-radius:5px;
+    border:2px solid #555;
+    margin-bottom: 50px;
+}
+
+dialog .cancel,[type="button"]
+{
+  width: px;
 }
 
 .booksList

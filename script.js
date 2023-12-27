@@ -11,8 +11,7 @@ const newReadField = document.getElementById("newRead");
 addBtn.addEventListener('click', () => dialog.showModal());
 
 const myLibrary = [
-    {title: "jj", author: "jj", pages: "55", read: true},
-    {title: "j4", author: "j5", pages: "55", read: true}
+   
 ];
 
 function Book(title,author,pages,read)
@@ -113,3 +112,7 @@ function removeButton(event){
  const bookBlock = correspondingTitle.parentNode;
  bookBlock.remove();
 }
+
+// Add original 2 books on page
+newBlock(new Book("1984", "George Orwell", "376", true));
+newBlock(new Book("Atlas Shrugged", "Ayn Rand", "1168", false));

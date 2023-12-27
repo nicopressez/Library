@@ -7,9 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
     </head>
     <body>
-        <section class="head"></section>
+        <section class="head"><h1>library.</h1></section>
         <button class="addBtn" id="addBtn">Add a book</button>
         <dialog class="newBook" id="newBook">
           <p>Add new book</p>
@@ -17,21 +21,13 @@
             <label><input id ="newTitle" type="text" placeholder="Title" name="newTitle"> </label>
             <label><input id="newAuthor" type="text" placeholder="Author" name="newAuthor" ></label>
             <label><input id="newPages" type="number" placeholder="Pages" name="newPages" ></label>
-            <label>Have you read it?<input id="newRead" type="checkbox" name="newRead" ></label>
+            <label class="readlabel">Have you read it?<input id="newRead" type="checkbox" name="newRead" ></label>
             <input id="confirmButton" type="button" name="button" value="Submit" onClick="addBook(this.form)">
-            <button>Cancel</button>
+            <button class="cancel">Cancel</button>
           </form>
         </dialog>
 
         <section class="booksList" id="booksList">
-          <div class="bookblock" id="bookblock">
-            <h2 class="booktitle">Titled</h2>
-            <h6 class="bookauthor">Authored</h6>
-            <p class="bookpages">356 pages</p>
-            <button class="bookread">Not read</button>
-            <button class="bookremove" id="bookremove">Remove</button>
-          </div>
-          <div class="bookblock" id="bookblock"></div>
 
         </section>
         
