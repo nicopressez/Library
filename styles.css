@@ -51,3 +51,8 @@
 {
   margin-top: 20px;
 }
+
+.booksForm > label
+{ 
+ display: block;
+}

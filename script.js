@@ -1,4 +1,8 @@
+const dialog = document.querySelector('dialog');
+const addBtn = document.getElementById('addBtn');
 const booksList = document.getElementById("booksList");
+
+addBtn.addEventListener('click', () => dialog.showModal());
 
 const myLibrary = [
     {title: "jj", author: "jj", pages: "55", read: "read"},
@@ -12,10 +16,6 @@ function Book(title,author,pages,read)
  this.pages = pages
  this.read = read;
  myLibrary.push(this);
-}
-
-function addBookToLibrary() {
-
 }
 
 function newBlock(book) 
@@ -44,10 +44,10 @@ bookBlock.appendChild(bookPages);
 bookBlock.appendChild(bookRead);
 }
 
-function addBooks(){
-    for (let i = 0; i < myLibrary.length; i++) {
-     newBlock(myLibrary[i]);   }
+function addBook (form) {
+    var newTitle = form.newTitle.value;
+    var newAuthor = form.newAuthor.value;
+    var newPages = form.newPages.value;
+    Book(`${newTitle}`,`${newAuthor}`,`${newPages}`, `not read`);
+    newBlock(myLibrary[myLibrary.length - 1])
 }
-
-book5 = Book("jr", "ff", "56", "not read",)
-addBooks();
