@@ -39,8 +39,8 @@ const bookRead = document.createElement("button");
 const bookRemove = document.createElement("button");
 
 bookTitle.textContent = book.title;
-bookAuthor.textContent = book.author;
-bookPages.textContent = book.pages;
+bookAuthor.textContent = `by ${book.author}`;
+bookPages.textContent = `${book.pages} pages`;
 book.read == true ? bookRead.textContent ="Read" : bookRead.textContent = "Not read";
 bookRemove.textContent = "Remove";
 
@@ -57,6 +57,9 @@ bookBlock.appendChild(bookAuthor);
 bookBlock.appendChild(bookPages);
 bookBlock.appendChild(bookRead);
 bookBlock.appendChild(bookRemove);
+
+bookRead.textContent == "Not read" ? bookRead.style.background = "yellow"
+: bookRead.style.background = "green";
 
 const bookReadButtons = document.querySelectorAll('.bookread');
 bookReadButtons.forEach(button => {
@@ -99,6 +102,9 @@ function changeRead(event){
     correspondingBook.toggleRead();
     correspondingBook.read == true ? clickedButton.textContent ="Read" 
     : clickedButton.textContent = "Not read";
+
+    clickedButton.textContent == "Not read" ? clickedButton.style.background = "yellow"
+    : clickedButton.style.background = "green";
 }
 
 // When remove button is pressed, remove corresponding book from array and delete html block
